@@ -30,16 +30,41 @@
 
 // ---------------------------------------------------
 
-let arr = [10,23,30,43,50,63,70]; //older array = 7 elements
+// let arr = [10,23,30,43,50,63,70]; //older array = 7 elements
 
-// filter = HOF that accepts a cb fn with 2 arguments and it returns a new array (with no compulsion on no of elements)
+// // filter = HOF that accepts a cb fn with 2 arguments and it returns a new array (with no compulsion on no of elements)
 
-let returnedArr =   arr.filter( function(item,index){
-                        if(item%10 === 0){
-                            return true
-                        }
-                    } )
+// let returnedArr =   arr.filter( function(item,index){
+//                         if(index>3){
+//                             return true
+//                         }
+//                     } )
 
-console.log(arr);
-console.log(returnedArr); //length is not fixed
+// console.log(arr);
+// console.log(returnedArr); //length is not fixed
                     
+
+// ---------------------------------------------------
+
+let arr = [10,23,30,43,50,63,70]; 
+
+let doubledArr = arr.map(function(item,index){
+    return item*2
+})
+let filteredArr = doubledArr.filter(function(item,index){
+    if(item>60){ return true}
+})
+
+console.log(filteredArr);
+
+// -----------------------------------------
+
+let arr2 = [10,23,30,43,50,63,70]; 
+
+let filteredArr2 = arr2.map(function(item,index){
+    return item*2
+}).filter(function(item,index){
+    if(item>60){ return true}
+})
+
+console.log(filteredArr2);
