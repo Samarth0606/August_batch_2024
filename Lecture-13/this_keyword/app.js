@@ -133,3 +133,24 @@
 //     }
 // }
 // obj.fn()
+
+// ------------------------------
+
+// const logThis = () => { 
+//     console.log(this);
+// }
+
+// const myObj = { foo: logThis }
+
+// my0bj.foo();
+
+// ------------------------------------
+
+// const myObj = { 
+//     foo: () => { 
+//         console.log(this);
+//     } 
+// }
+
+// myObj.foo(); // window
+
