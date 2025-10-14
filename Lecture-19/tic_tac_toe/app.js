@@ -6,7 +6,7 @@ for(let cell of cellElements){
     cell.addEventListener('click', handleClick , {once:true})
 }
 
-let circle_turn = false; //x turn
+let circle_turn = false;        //x turn
 
 let winning_combination = [
     [0,1,2],
@@ -59,3 +59,10 @@ function restartFn(){
     window.location.reload();
 }
 document.querySelector('.restart').onclick = restartFn;
+
+
+
+
+//local storage
+// window.localStorage('setItem')
+// window.localStorage('getItem')
