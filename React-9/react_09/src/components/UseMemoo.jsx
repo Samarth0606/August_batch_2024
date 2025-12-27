@@ -8,7 +8,7 @@ function UseMemoo(){
     }
     let memoCount = useMemo(()=>{
         let ans = 0;
-        for(let i=1;i<=inp;i++){
+        for(let i=1;i<=inp;i++){ 
             console.log("loop ran");
             ans = ans+i
         }
