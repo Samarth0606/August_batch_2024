@@ -4,6 +4,7 @@ import { BiSolidOffer } from "react-icons/bi";
 import { IoHelpBuoySharp } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -18,19 +19,19 @@ function Header() {
                 </div>
                 <div className='mx-4 flex'>
                     <span className='mt-1'> <BiSolidOffer /> </span>
-                    <li className='px-2'>OFFER</li>
+                    <Link to='/offers'> <li className='px-2'>OFFERS</li> </Link>
                 </div>
                 <div className='mx-4 flex'>
                     <span className='mt-1'> <IoHelpBuoySharp /> </span>
-                    <li className='px-2'>HELP</li>
+                    <Link to='/help'> <li className='px-2'>HELP</li> </Link>
                 </div>
                 <div className='mx-4 flex'>
                     <span className='mt-1'> <CgProfile /> </span>
-                    <li className='px-2'>SIGNIN</li>
+                    <Link to='/signin'> <li className='px-2'>SIGNIN</li> </Link>
                 </div>
                 <div className='mx-4 flex'>
                     <span className='mt-1'> <FaShoppingCart /> </span>
-                    <li className='px-2'>CART</li>
+                    <Link to='/cart'> <li className='px-2'>CART</li> </Link>
                 </div>
             </ul> 
         </nav>

@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import ApiCalling from "./components/ApiCalling";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
@@ -8,7 +9,8 @@ function App(){
     <div>
       {/* <ApiCalling /> */}
       <Header />
-      <Body />
+      {/* <Body /> */}
+      <Outlet />
       <Footer />
     </div>
   )
