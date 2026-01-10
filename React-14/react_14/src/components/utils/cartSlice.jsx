@@ -8,10 +8,14 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state,action)=>{
-        state.items.push()
+        state.items.push(action.payload)
     },
-    removeItem: (state)=>{},
-    clearCart: (state)=>{}
+    removeItem: (state)=>{
+        state.items.pop(); //try yourself
+    },
+    clearCart: (state)=>{
+        state.items.length = 0;
+    }
   },
 })
 
