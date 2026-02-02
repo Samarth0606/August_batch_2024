@@ -98,20 +98,109 @@
 
 // -------------------------------------
 // array object
-let users = [{name:"sam" , age:21}]
+// let users = [{name:"sam" , age:21}]
 
-interface User{
-    name: string , 
-    age: number
+// interface User{
+//     name: string , 
+//     age: number
+// }
+
+// function isLegal(users: User[]){
+//     for(let item of users){
+//         if(item.age > 18){
+//             return true
+//         }else{
+//             return false
+//         }
+//     }
+// }
+// isLegal(users)
+
+// ---------------------------
+// type X = {
+//     name:string,
+//     age:number,
+// }
+// type Y  =  X & {
+//     greet(phrase:string): void
+// }
+
+// class Student implements Y{
+//     name:string;
+//     age:number;
+//     constructor(n:string, a:number){
+//         this.name = n;
+//         this.age = a;
+//     }
+//     greet(phrase:string){
+//         console.log(`${phrase} ${this.name}`);
+//     }
+// }
+
+// let newStudent = new Student("Samarth" , 12)
+// let newStudent2 = new Student("Maverick" , 21)
+
+
+// ---------------------------------------
+
+// enums(enumerations)
+
+// function doSomething(keyPressed:string){
+//     if(keyPressed == "up"){ console.log("UP") }
+//     else if(keyPressed == "down"){ console.log("DOWN") }
+// }
+
+// doSomething("up")
+// doSomething("down")
+// doSomething("chandigarh")
+
+// ---------------------------------------
+
+// type Key = "up"|"down"|"right"|"left"
+
+// function doSomething(keyPressed:Key){
+//     if(keyPressed == "up"){ console.log("UP") }
+//     else if(keyPressed == "down"){ console.log("DOWN") }
+// }
+// doSomething("up")
+// doSomething("down")
+// doSomething("chandigarh")
+
+// ---------------------------------------
+
+// enum Direction{
+//     up = "up", //11 // 0 by default
+//     down = "down", //12
+//     left = "left", //13
+//     right = "right"
+// }
+// function doSomething(keyPressed:Direction){
+//     if(keyPressed == Direction.up){ console.log("UP") }
+//     else if(keyPressed == Direction.down){ console.log("DOWN") }
+// }
+// console.log( Direction.up) 
+// console.log( Direction.down) 
+// console.log( Direction.left)
+
+
+// ---------------------------------------
+//reusability (use case)
+enum Responses{
+    Success = 200,
+    NotFound = 403 ,
+    Error = 500
 }
 
-function isLegal(users: User[]){
-    for(let item of users){
-        if(item.age > 18){
-            return true
-        }else{
-            return false
-        }
+app.get('/' , (req,res)=>{
+    if(!req.query.userId){
+        res.status(Responses.NotFound).json({})
     }
-}
-isLegal(users)
+    res.status(Responses.Success).json({})
+})
+
+app.get('/sam' , (req,res)=>{
+    if(!req.query.userId){
+        res.status(Responses.NotFound).json({})
+    }
+    res.status(Responses.Success).json({})
+})
